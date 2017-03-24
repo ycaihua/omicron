@@ -7,16 +7,39 @@
         <module>omicron-admin</module>
         <module>omicron-core</module>
         <module>omicron-biz</module>
+        <module>omicron-common</module>
     </modules>
     <parent>
         <groupId>com.datagre.framework</groupId>
         <artifactId>framework-parent</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>${framework.version}</version>
     </parent>
     <groupId>com.datagre.apps.omicron</groupId>
     <artifactId>omicron</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>${omicron.version}</version>
     <packaging>pom</packaging>
-    <name>Omicron</name>
+    <name>omicron</name>
     <description>Datagre Configuration Center</description>
+    <properties>
+        <omicron.version>1.0-SNAPSHOT</omicron.version>
+        <admin.version>1.0-SNAPSHOT</admin.version>
+        <common.version>1.0-SNAPSHOT</common.version>
+        <core.version>1.0-SNAPSHOT</core.version>
+        <framework.version>1.0-SNAPSHOT</framework.version>
+        <biz.version>1.0-SNAPSHOT</biz.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.datagre.apps.omicron</groupId>
+                <artifactId>omicron-core</artifactId>
+                <version>${core.version}</version>
+            </dependency>
+            <!--<dependency>-->
+                <!--<groupId>com.datagre.apps.omicron</groupId>-->
+                <!--<artifactId>omicron-common</artifactId>-->
+                <!--<version>${common.version}</version>-->
+            <!--</dependency>-->
+        </dependencies>
+    </dependencyManagement>
 </project>
