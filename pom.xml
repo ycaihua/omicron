@@ -25,6 +25,7 @@
         <common.version>1.0-SNAPSHOT</common.version>
         <core.version>1.0-SNAPSHOT</core.version>
         <biz.version>1.0-SNAPSHOT</biz.version>
+        <foundation.version>1.0-SNAPSHOT</foundation.version>
         <jpa.version>1.4.1.RELEASE</jpa.version>
         <security.version>1.4.1.RELEASE</security.version>
         <cloud-web.version>1.4.0.RELEASE</cloud-web.version>
@@ -40,6 +41,11 @@
                 <groupId>com.datagre.apps.omicron</groupId>
                 <artifactId>omicron-common</artifactId>
                 <version>${common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.datagre.framework</groupId>
+                <artifactId>framework-foundation</artifactId>
+                <version>${foundation.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>

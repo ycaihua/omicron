@@ -1,6 +1,6 @@
 package com.datagre.apps.omicron.common.config;
 
-import com.datagre.apps.omicron.common.utils.OmicronThreadFactory;
+import com.datagre.apps.omicron.utils.OmicronThreadFactory;
 import com.google.common.base.Splitter;
 import com.google.common.base.Strings;
 import org.slf4j.Logger;
