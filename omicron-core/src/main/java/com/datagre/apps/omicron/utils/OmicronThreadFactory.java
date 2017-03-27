@@ -1,4 +1,4 @@
-package com.datagre.apps.omicron.common.utils;
+package com.datagre.apps.omicron.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
