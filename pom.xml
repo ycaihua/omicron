@@ -12,21 +12,22 @@
     <parent>
         <groupId>com.datagre.framework</groupId>
         <artifactId>framework-parent</artifactId>
-        <version>${framework.version}</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>com.datagre.apps.omicron</groupId>
     <artifactId>omicron</artifactId>
-    <version>${omicron.version}</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>omicron</name>
     <description>Datagre Configuration Center</description>
     <properties>
-        <omicron.version>1.0-SNAPSHOT</omicron.version>
         <admin.version>1.0-SNAPSHOT</admin.version>
         <common.version>1.0-SNAPSHOT</common.version>
         <core.version>1.0-SNAPSHOT</core.version>
-        <framework.version>1.0-SNAPSHOT</framework.version>
         <biz.version>1.0-SNAPSHOT</biz.version>
+        <jpa.version>1.4.1.RELEASE</jpa.version>
+        <security.version>1.4.1.RELEASE</security.version>
+        <cloud-web.version>1.4.0.RELEASE</cloud-web.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -35,11 +36,26 @@
                 <artifactId>omicron-core</artifactId>
                 <version>${core.version}</version>
             </dependency>
-            <!--<dependency>-->
-                <!--<groupId>com.datagre.apps.omicron</groupId>-->
-                <!--<artifactId>omicron-common</artifactId>-->
-                <!--<version>${common.version}</version>-->
-            <!--</dependency>-->
+            <dependency>
+                <groupId>com.datagre.apps.omicron</groupId>
+                <artifactId>omicron-common</artifactId>
+                <version>${common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jpa</artifactId>
+                <version>${jpa.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-security</artifactId>
+                <version>${security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${cloud-web.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
