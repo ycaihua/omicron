@@ -19,6 +19,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>omicron</name>
+    <url></url>
     <description>Datagre Configuration Center</description>
     <properties>
         <admin.version>1.0-SNAPSHOT</admin.version>
