@@ -1,6 +1,6 @@
 package com.datagre.apps.omicron.common.entity;
 
-import com.datagre.apps.omicron.enums.ConfigFileFormat;
+import com.datagre.apps.omicron.core.enums.ConfigFileFormat;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 

@@ -11,18 +11,19 @@
     <packaging>jar</packaging>
 
     <name>omicron-biz</name>
-    <url>http://maven.apache.org</url>
+    <url>www.datagre.com</url>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
+            <groupId>com.datagre.apps.omicron</groupId>
+            <artifactId>omicron-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 </project>
