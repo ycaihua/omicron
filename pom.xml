@@ -8,6 +8,7 @@
         <module>omicron-core</module>
         <module>omicron-biz</module>
         <module>omicron-common</module>
+        <module>omicron-config</module>
     </modules>
     <parent>
         <groupId>com.datagre.framework</groupId>
