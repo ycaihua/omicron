@@ -13,13 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.datagre.apps.omicron.biz.eureka;
+package com.datagre.apps.omicron.admin.controller;
 
-import org.springframework.cloud.netflix.eureka.EurekaClientConfigBean;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by ycaihua on 2017/3/28.
+ * Created by ycaihua on 2017/4/5.
  * https://github.com/ycaihua/omicron
  */
-public class OmicronEurekaClientConfig extends EurekaClientConfigBean{
+@RestController
+@RequestMapping(path = "/")
+public class IndexController {
+    @RequestMapping(path = "", method = RequestMethod.GET)
+    public String index() {
+        return "omicron-admin";
+    }
 }

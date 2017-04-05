@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: omicron-admin
+  profiles:
+    active: ${omicron_profile}
+datagre:
+  appid: 100003172
+server:
+  port: 8090
+eureka:
+  instance:
+    hostname: ${hostname:localhost}
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8080/eureka/
+    eureka-service-url-poll-interval-seconds: 60
+endpoints:
+  health:
+    sensitive: false
+management:
+  security:
+    enabled: false
+  health:
+    status:
+      order: DOWN, OUT_OF_SERVICE, UNKNOWN, UP
+datagre:
+  swagger:
+    enabled: true
+logging:
+  file: /opt/logs/${datagre.appid}/${spring.application.name}.log
