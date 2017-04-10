@@ -9,6 +9,7 @@
         <module>omicron-biz</module>
         <module>omicron-common</module>
         <module>omicron-config</module>
+        <module>omicron-client</module>
     </modules>
     <parent>
         <groupId>com.datagre.framework</groupId>
