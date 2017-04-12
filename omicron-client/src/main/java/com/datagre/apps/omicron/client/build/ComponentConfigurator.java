@@ -15,9 +15,18 @@
  */
 package com.datagre.apps.omicron.client.build;
 
+import com.datagre.apps.omicron.client.internals.ConfigServiceLocator;
+import com.datagre.apps.omicron.client.internals.DefaultConfigManager;
+import com.datagre.apps.omicron.client.internals.RemoteConfigLongPollService;
+import com.datagre.apps.omicron.client.spi.DefaultConfigFactory;
+import com.datagre.apps.omicron.client.spi.DefaultConfigFactoryManager;
+import com.datagre.apps.omicron.client.spi.DefaultConfigRegistry;
+import com.datagre.apps.omicron.client.util.ConfigUtil;
+import com.datagre.apps.omicron.client.util.http.HttpUtil;
 import org.unidal.lookup.configuration.AbstractResourceConfigurator;
 import org.unidal.lookup.configuration.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -25,8 +34,20 @@ import java.util.List;
  * https://github.com/ycaihua/omicron
  */
 public class ComponentConfigurator extends AbstractResourceConfigurator {
+    public static void main(String[] args){
+        generatePlexusComponentsXmlFile(new ComponentConfigurator());
+    }
     @Override
     public List<Component> defineComponents() {
-        return null;
+        List<Component> all = new ArrayList<>();
+        all.add(A(DefaultConfigManager.class));
+        all.add(A(DefaultConfigFactory.class));
+        all.add(A(DefaultConfigRegistry.class));
+        all.add(A(DefaultConfigFactoryManager.class));
+        all.add(A(ConfigUtil.class));
+        all.add(A(HttpUtil.class));
+        all.add(A(ConfigServiceLocator.class));
+        all.add(A(RemoteConfigLongPollService.class));
+        return all;
     }
 }

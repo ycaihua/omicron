@@ -15,27 +15,19 @@
  */
 package com.datagre.apps.omicron.client.internals;
 
-import com.datagre.apps.omicron.client.Config;
-import com.datagre.apps.omicron.client.ConfigFile;
 import com.datagre.apps.omicron.core.enums.ConfigFileFormat;
 
 /**
- * Created by ycaihua on 2017/4/7.
+ * Created by ycaihua on 2017/4/11.
  * https://github.com/ycaihua/omicron
  */
-public interface ConfigManager {
-    /**
-     * Get the config instance for the namespace specified.
-     * @param namespace the namespace
-     * @return the config instance for the namespace
-     */
-    public Config getConfig(String namespace);
+public class JsonConfigFile extends PlainTextConfigFile {
+    public JsonConfigFile(String namespace, ConfigRepository configRepository) {
+        super(namespace, configRepository);
+    }
 
-    /**
-     * Get the config file instance for the namespace specified.
-     * @param namespace the namespace
-     * @param configFileFormat the config file format
-     * @return the config file instance for the namespace
-     */
-    public ConfigFile getConfigFile(String namespace, ConfigFileFormat configFileFormat);
+    @Override
+    public ConfigFileFormat getConfigFileFormat() {
+        return ConfigFileFormat.JSON;
+    }
 }
