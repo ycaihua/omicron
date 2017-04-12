@@ -60,5 +60,6 @@ public class OmicronDataSourceProvider implements DataSourceProvider,LogEnabled{
                 dataSourceDef = new DataSourcesDef();
             }
         }
+        return dataSourceDef;
     }
 }

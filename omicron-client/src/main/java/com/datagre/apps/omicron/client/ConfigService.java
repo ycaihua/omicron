@@ -15,7 +15,6 @@
  */
 package com.datagre.apps.omicron.client;
 
-import com.datagre.apps.omicron.Omicron;
 import com.datagre.apps.omicron.client.exceptions.OmicronConfigException;
 import com.datagre.apps.omicron.client.internals.ConfigManager;
 import com.datagre.apps.omicron.client.spi.ConfigFactory;

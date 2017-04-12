@@ -15,16 +15,11 @@
  */
 package com.datagre.apps.omicron.client.internals;
 
-import com.datagre.apps.omicron.Omicron;
-import com.datagre.apps.omicron.client.exceptions.OmicronConfigException;
 import com.datagre.apps.omicron.client.util.ExceptionUtil;
 import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
 import java.util.List;
 import java.util.Properties;
 

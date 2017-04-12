@@ -62,4 +62,5 @@ public class ConfigServiceAutoConfiguration {
             releaseMessageScanner.addMessageListener(notificationController);
             return releaseMessageScanner;
         }
+    }
 }
